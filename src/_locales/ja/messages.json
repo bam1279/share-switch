@@ -1,0 +1,28 @@
+{
+  "extensionDescription": {
+    "message": "X(旧Twitter)のシェアボタンから別のSNSにリダイレクトできるウェブブラウザ拡張機能です。"
+  },
+  "settings": {
+    "message": "設定"
+  },
+  "origin": {
+    "message": "変更元"
+  },
+  "destination": {
+    "message": "変更先"
+  },
+  "showConfirmationDialog": {
+    "message": "確認ダイアログを表示する"
+  },
+  "openBothPages": {
+    "message": "両方のページを開く"
+  },
+  "confirmationDialogText": {
+    "message": "ShareSwitchを使用して$PLATFORM$にリダイレクトします。よろしいですか？",
+    "placeholders": {
+      "platform": {
+        "content": "$1"
+      }
+    }
+  }
+}

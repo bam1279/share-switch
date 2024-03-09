@@ -1,0 +1,29 @@
+body {
+  width: 150px;
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+    'Hiragino Sans', Meiryo, sans-serif;
+}
+
+.settings-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 2px solid black;
+  transition: background-color 0.3s;
+}
+
+.settings-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.settings-btn img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}

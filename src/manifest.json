@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "ShareSwitch",
+  "version": "1.0.0",
+  "description": "__MSG_extensionDescription__",
+  "icons": {
+    "16": "images/share-switch-16.png",
+    "48": "images/share-switch-48.png",
+    "128": "images/share-switch-128.png"
+  },
+  "default_locale": "en",
+  "homepage_url": "https://github.com/bam1279/share-switch",
+  "background": {
+    "service_worker": "service-worker/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "host_permissions": ["*://*/*"],
+  "permissions": ["scripting", "storage", "webNavigation"]
+}

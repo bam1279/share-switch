@@ -1,0 +1,31 @@
+{
+  "extensionDescription": {
+    "message": "Redirect social media share buttons to your preferred microblogging platforms.",
+    "description": "Description for manifest.json"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "origin": {
+    "message": "Origin",
+    "description": "The original destination platform of the Share button"
+  },
+  "destination": {
+    "message": "Destination"
+  },
+  "showConfirmationDialog": {
+    "message": "Show Confirmation Dialog"
+  },
+  "openBothPages": {
+    "message": "Open Both Pages"
+  },
+  "confirmationDialogText": {
+    "message": "Do you want to redirect to $PLATFORM$ to share your post via ShareSwitch?",
+    "placeholders": {
+      "platform": {
+        "content": "$1",
+        "example": "Bluesky"
+      }
+    }
+  }
+}
