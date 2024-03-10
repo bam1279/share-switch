@@ -91,7 +91,7 @@ const validConfirm = (is) => (confirm) => confirm === is;
 const urlFilter = [
   {
     originAndPathMatches:
-      '^https?://(x|twitter).com/(intent/(tweet|post)|share)$',
+      '^https?://(x|twitter).com/(intent/(tweet|post)|share)/?$',
   },
 ];
 
