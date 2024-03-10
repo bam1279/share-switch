@@ -45,15 +45,21 @@ const showConfirmBeforeRedirect = async (
   openBoth,
 ) => {
   const text = i18n.getMessage('confirmationDialogText', destOptions.name);
-  const [onExecuted] = await scripting
+  const injectionResults = await scripting
     .executeScript({
       target: { tabId },
       func: (message) => window.confirm(message), // eslint-disable-line no-alert
       args: [text],
     })
-    .catch((err) => handleExtensionApiError(err));
+    .catch((err) => {
+      console.error('Extension API error: ', err);
+    });
 
-  if (onExecuted.result) {
+  if (
+    Array.isArray(injectionResults) &&
+    injectionResults.length &&
+    injectionResults[0].result
+  ) {
     executeRedirect(tabId, searchParams, destOptions, openBoth);
   }
 };
