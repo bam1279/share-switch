@@ -13,23 +13,18 @@ runtime.onInstalled.addListener(() =>
 );
 
 const extractParams = (searchParams) => {
-  const DECODED_HASH_SYMBOLL = '#';
-  const DECODED_SPACE_CHAR = ' ';
-
   // Join multiple 'text' and 'url' parameters with commas (same behavior as X)
   const text = searchParams.getAll('text').join(',');
   const url = searchParams.getAll('url').join(',');
   const hashtag = searchParams
     .getAll('hashtags')
     .flatMap((item) => item.split(','))
-    .map((item) => DECODED_HASH_SYMBOLL + item)
+    .map((item) => (item ? `#${item}` : ''))
     .join(' ');
 
   // Insert a space after the last text (same behavior as X)
   return [text, url, hashtag]
-    .map((value) =>
-      value ? encodeURIComponent(value + DECODED_SPACE_CHAR) : '',
-    )
+    .map((value) => (value ? encodeURIComponent(`${value} `) : ''))
     .join('');
 };
 
