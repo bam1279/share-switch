@@ -21,6 +21,6 @@
     "page": "options/options.html",
     "open_in_tab": true
   },
-  "host_permissions": ["*://*/*"],
+  "host_permissions": ["*://twitter.com/*", "*://x.com/*"],
   "permissions": ["scripting", "storage", "webNavigation"]
 }
