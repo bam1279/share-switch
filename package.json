@@ -1,8 +1,8 @@
 {
   "name": "share-switch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "description": "Redirect social media share buttons to your preferred microblogging platforms.",
+  "description": "Redirect X (formerly Twitter) share buttons to your favorite microblogging platforms.",
   "scripts": {
     "fix": "run-p fix:*",
     "fix:eslint": "npm run lint:eslint -- --fix",
