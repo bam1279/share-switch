@@ -3,13 +3,10 @@ class Store extends EventTarget {
 
   #settings;
 
-  #handleError;
-
-  constructor(storage, settings, handleError) {
+  constructor(storage, settings) {
     super();
     this.#storage = storage;
     this.#settings = settings;
-    this.#handleError = handleError;
 
     // getters
     this.getAllRedirects = () => this.#settings.redirects;
@@ -17,14 +14,20 @@ class Store extends EventTarget {
   }
 
   // Asynchronous processes cannot be called directly within the constructor
-  static buildFromStorage = async (storage, defaultSettings, handleError) => {
-    const settings = await storage.get().catch((err) => handleError(err));
+  static buildFromStorage = async (storage, defaultSettings) => {
+    const settings = await storage
+      .get()
+      .catch((err) => console.error('Extension API error: ', err));
     const hasRequiredKeys = settings.redirects && settings.platforms;
     if (hasRequiredKeys) return new Store(storage, settings);
 
-    await storage.clear().catch((err) => handleError(err));
-    await storage.set(defaultSettings).catch((err) => handleError(err));
-    return new Store(storage, defaultSettings, handleError);
+    await storage
+      .clear()
+      .catch((err) => console.error('Extension API error: ', err));
+    await storage
+      .set(defaultSettings)
+      .catch((err) => console.error('Extension API error: ', err));
+    return new Store(storage, defaultSettings);
   };
 
   static #isObject(item) {
@@ -50,7 +53,9 @@ class Store extends EventTarget {
   }
 
   async #save(settings) {
-    await this.#storage.set(settings).catch((err) => this.#handleError(err));
+    await this.#storage
+      .set(settings)
+      .catch((err) => console.error('Extension API error: ', err));
     this.#settings = settings;
     this.dispatchEvent(new CustomEvent('save'));
   }

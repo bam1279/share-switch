@@ -5,11 +5,12 @@ import {
   syncStorage,
   tabs,
   webNavigation,
-  handleExtensionApiError,
 } from '../infrastructure/browser.js';
 
 runtime.onInstalled.addListener(() =>
-  runtime.openOptionsPage().catch((err) => handleExtensionApiError(err)),
+  runtime
+    .openOptionsPage()
+    .catch((err) => console.error('Extension API error: ', err)),
 );
 
 const extractParams = (searchParams) => {
@@ -67,7 +68,7 @@ const showConfirmBeforeRedirect = async (
 const handleClick = async (details, redirect, validConfirm) => {
   const settings = await syncStorage
     .get()
-    .catch((err) => handleExtensionApiError(err));
+    .catch((err) => console.error('Extension API error: ', err));
   const currentUrl = new URL(details.url);
   const id = 'x';
   const redirectOptions = settings.redirects?.[id];

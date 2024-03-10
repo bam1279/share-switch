@@ -9,7 +9,3 @@ export const { scripting } = browser;
 export const syncStorage = browser.storage.sync;
 export const { tabs } = browser;
 export const { webNavigation } = browser;
-
-export const handleExtensionApiError = (err) => {
-  console.error('Extension API error: ', err); // eslint-disable-line no-console
-};

@@ -1,16 +1,8 @@
 import DEFAULT_SETTINGS from './default-settings.js';
 import Store from './store.js';
-import {
-  i18n,
-  syncStorage,
-  handleExtensionApiError,
-} from '../infrastructure/browser.js';
+import { i18n, syncStorage } from '../infrastructure/browser.js';
 
-const store = await Store.buildFromStorage(
-  syncStorage,
-  DEFAULT_SETTINGS,
-  handleExtensionApiError,
-);
+const store = await Store.buildFromStorage(syncStorage, DEFAULT_SETTINGS);
 
 const setLocalization = () => {
   document.querySelector('h1').innerText =
