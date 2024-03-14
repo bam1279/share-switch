@@ -1,0 +1,92 @@
+name: バグ報告
+description: 改善のため、バグ報告の作成にご協力ください
+title: "[Bug]: (ここに記入)"
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告にご協力いただきありがとうございます！
+  - type: checkboxes
+    attributes:
+      label: 前提条件
+      options:
+        - label: このissueが重複していないことを確認しました。
+            ([ここ](https://github.com/bam1279/share-switch/issues) から検索できます。)
+          required: true
+        - label: 他の拡張機能がこの問題を引き起こしていないことを確認しました。
+          required: true
+        - label: 最新版にアップグレードしてもまだ問題が発生することを確認しました。
+          required: true
+  - type: textarea
+    attributes:
+      label: バグの説明
+      description: どのようなバグであるか、明確かつ簡潔に説明してください。
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 再現方法
+      description: |
+        バグを再現するための手順
+        1. ...に移動する
+        2. ...をクリックする
+        3. ...までスクロールする
+        4. エラーが発生する
+      value: |
+        1. 
+        2. 
+        3. 
+        4. 
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 本来期待した動作
+      description: バグがない場合の望ましい動作。こうあるべき、という自分の意見で構いません。
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: スクリーンショット
+      description: 必要な場合は、問題の説明に役立つスクリーンショットを追加してください。
+      value: |
+        <details>
+        <summary>スクリーンショット</summary>
+
+        <!-- ここにスクショをドラッグ&ドロップしてください -->
+        <!-- ⬇️  ⬇️  ⬇️ -->
+
+
+        <!-- ⬆️  ⬆️  ⬆️ -->
+
+        </details>
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: "PC（以下の情報を入力してください）:"
+      description: |
+        例:
+          - **OS**: Windows 11
+          - **ブラウザ**: Chrome
+          - **ブラウザのバージョン**: 123
+      value: |
+        - OS:
+        - ブラウザ:
+        - ブラウザのバージョン:
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: その他
+      description: その他、この問題について何か付け加えることがあれば、ここに書いてください。
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: このバグを自分で修正しますか？
+      options:
+        - label: はい、自分でバグを修正し、プルリクエストを送ります
+          required: false

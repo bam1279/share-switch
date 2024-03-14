@@ -80,3 +80,15 @@ body:
       render: markdown
     validations:
       required: true
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: Do you want to address this bug yourself?
+      options:
+        - label: Yes, I will patch the bug myself and send a pull request
+          required: false

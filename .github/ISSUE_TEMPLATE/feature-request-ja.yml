@@ -1,0 +1,48 @@
+name: 機能リクエスト
+description: このプロジェクトにアイデアを提案する
+title: "[Feature]: (ここに記入)"
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        機能リクエストにご協力いただきありがとうございます！
+  - type: checkboxes
+    attributes:
+      label: 前提条件
+      options:
+        - label: このissueが重複していないことを確認しました。
+            ([ここ](https://github.com/bam1279/share-switch/issues) から検索できます。)
+          required: true
+  - type: textarea
+    attributes:
+      label: 背景
+      description: |
+        この機能が必要とされる背景や、この機能によって解決される問題について説明してください。
+        例: 私はいつも...で困っています。なぜなら...
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 提案する機能の詳細
+      description: あなたが望んでいる機能や改善案を、明確かつ簡潔に記述してください。
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 検討した代替案
+      description: あなたが検討したが採用しなかった代替案や機能があれば、明確かつ簡潔に説明してください。
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: その他
+      description: 機能リクエストに関する追加の情報やスクリーンショットがある場合は、ここに追加してください。
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: この機能を自分で実装したいですか？
+      options:
+        - label: はい、自分で実装してプルリクエストを送りたいです
+          required: false
