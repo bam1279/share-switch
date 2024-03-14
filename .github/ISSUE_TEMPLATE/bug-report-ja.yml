@@ -1,4 +1,4 @@
-name: バグ報告
+name: バグ報告 (JP)
 description: 改善のため、バグ報告の作成にご協力ください
 title: "[Bug]: (ここに記入)"
 labels: ["bug", "triage"]
@@ -81,7 +81,7 @@ body:
   - type: textarea
     attributes:
       label: その他
-      description: その他、この問題について何か付け加えることがあれば、ここに書いてください。
+      description: その他、この問題について追加の情報があればここに書いてください。
     validations:
       required: false
   - type: checkboxes
