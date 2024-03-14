@@ -7,11 +7,13 @@ import {
   webNavigation,
 } from '../infrastructure/browser.js';
 
-runtime.onInstalled.addListener(() =>
-  runtime
-    .openOptionsPage()
-    .catch((err) => console.error('Extension API error: ', err)),
-);
+runtime.onInstalled.addListener((details) => {
+  if (details.reason === 'install') {
+    runtime
+      .openOptionsPage()
+      .catch((err) => console.error('Extension API error: ', err));
+  }
+});
 
 const extractParams = (searchParams) => {
   // Join multiple 'text' and 'url' parameters with commas (same behavior as X)
