@@ -2,7 +2,6 @@
   <img src="src/images/share-switch-128.png" alt="ShareSwitch logo" />
 </p>
 
-
 # ShareSwitch
 
 Xのシェアボタンから他のSNSへ投稿できるブラウザ拡張機能
