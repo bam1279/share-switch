@@ -1,7 +1,7 @@
 name: Bug Report (EN)
 description: Create a report to help us improve
-title: "[Bug]: (fill in)"
-labels: ["bug", "triage"]
+title: '[Bug]: (fill in)'
+labels: ['bug', 'triage']
 body:
   - type: markdown
     attributes:
@@ -17,7 +17,8 @@ body:
           required: true
         - label: I have verified that other extensions are not causing the issue.
           required: true
-        - label: I have verified that the issue still occurs after upgrading to the latest
+        - label:
+            I have verified that the issue still occurs after upgrading to the latest
             version.
           required: true
   - type: textarea
@@ -39,7 +40,7 @@ body:
         1. 
         2. 
         3. 
-        4. 
+        4.
     validations:
       required: true
   - type: textarea
@@ -67,7 +68,7 @@ body:
       required: false
   - type: textarea
     attributes:
-      label: "Desktop (please complete the following information):"
+      label: 'Desktop (please complete the following information):'
       description: |
         examples:
           - **OS**: Windows 11

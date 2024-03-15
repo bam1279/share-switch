@@ -1,8 +1,8 @@
 ---
 name: Feature Request (EN)
 description: Suggest an idea for this project
-title: "[Feature]: (fill in)"
-labels: ["enhancement", "triage"]
+title: '[Feature]: (fill in)'
+labels: ['enhancement', 'triage']
 body:
   - type: markdown
     attributes:
@@ -33,7 +33,8 @@ body:
   - type: textarea
     attributes:
       label: Describe alternatives you've considered
-      description: A clear and concise description of any alternative solutions or
+      description:
+        A clear and concise description of any alternative solutions or
         features you've considered.
     validations:
       required: false

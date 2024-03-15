@@ -1,7 +1,7 @@
 name: バグ報告 (JP)
 description: 改善のため、バグ報告の作成にご協力ください
-title: "[Bug]: (ここに記入)"
-labels: ["bug", "triage"]
+title: '[Bug]: (ここに記入)'
+labels: ['bug', 'triage']
 body:
   - type: markdown
     attributes:
@@ -37,7 +37,7 @@ body:
         1. 
         2. 
         3. 
-        4. 
+        4.
     validations:
       required: true
   - type: textarea
@@ -65,7 +65,7 @@ body:
       required: false
   - type: textarea
     attributes:
-      label: "PC（以下の情報を入力してください）:"
+      label: 'PC（以下の情報を入力してください）:'
       description: |
         例:
           - **OS**: Windows 11
