@@ -1,7 +1,11 @@
 {
+  "extensionName": {
+    "message": "ShareSwitch - Redirect Twitter share buttons to Bluesky, Mastodon, and more",
+    "description": "Extension name for manifest.json"
+  },
   "extensionDescription": {
-    "message": "Redirect X share buttons to your favorite microblogging platforms",
-    "description": "Description for manifest.json"
+    "message": "Redirect X (Twitter) share buttons to your favorite microblogging platforms",
+    "description": "Extension description for manifest.json"
   },
   "settings": {
     "message": "Settings"

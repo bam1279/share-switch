@@ -1,5 +1,6 @@
 body {
-  width: 150px;
+  width: auto;
+  min-width: 150px;
   margin: 0;
   font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
     'Hiragino Sans', Meiryo, sans-serif;
