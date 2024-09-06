@@ -1,6 +1,9 @@
 {
+  "extensionName": {
+    "message": "ShareSwitch - TwitterのシェアボタンからBluesky, MisskeyなどのSNSに投稿"
+  },
   "extensionDescription": {
-    "message": "Xのシェアボタンから他のSNSへ投稿できるブラウザ拡張機能"
+    "message": "X (Twitter) のシェアボタンから他のSNSへ投稿できるブラウザ拡張機能"
   },
   "settings": {
     "message": "設定"
