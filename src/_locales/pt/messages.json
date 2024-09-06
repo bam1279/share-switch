@@ -1,0 +1,32 @@
+{
+  "extensionName": {
+    "message": "ShareSwitch - Redireciona botões de compartilhamento do Twitter para Bluesky, Mastodon e mais"
+  },
+  "extensionDescription": {
+    "message": "Redireciona botões de compartilhamento do X (antigo Twitter) para suas plataformas favoritas de microblogging"
+  },
+  "settings": {
+    "message": "Configurações"
+  },
+  "origin": {
+    "message": "Origem"
+  },
+  "destination": {
+    "message": "Destino"
+  },
+  "showConfirmationDialog": {
+    "message": "Mostrar Caixa de Diálogo de Confirmação"
+  },
+  "openBothPages": {
+    "message": "Abrir Ambas as Páginas"
+  },
+  "confirmationDialogText": {
+    "message": "Você deseja redirecionar para $PLATFORM$ para compartilhar sua postagem via ShareSwitch?",
+    "placeholders": {
+      "platform": {
+        "content": "$1",
+        "example": "Bluesky"
+      }
+    }
+  }
+}
